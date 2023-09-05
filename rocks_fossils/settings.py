@@ -82,6 +82,15 @@ AUTHENTICATION_BACKENDS = (
 
 SITE_ID = 1
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_EMAIL_REQUIRED = False
+ACCOUNT_EMAIL_VERIFICATION = 'optional'
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = False
+ACCOUNT_USERNAME_MIN_LENGTH = 6
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/success'
 
 WSGI_APPLICATION = 'rocks_fossils.wsgi.application'
 
