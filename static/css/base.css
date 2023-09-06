@@ -1,4 +1,9 @@
-html {
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
     height: 100%;
     background-color: #F6F5F7
 }
@@ -37,8 +42,30 @@ nav {
 
 .hero-image{
     width: 100%;
-    opacity: 0.4;
+    /* opacity: 0.4; */
 }
+
+.border {
+    border: black solid 10px;
+    width: max-content;
+    padding: 10px;
+    background-color: #7099B2;
+}
+
+/* Form displays */
+.login-form {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+label {
+    display: none;
+}
+
+/* Headings */
 
 h1 {
     font-family: 'Rubik Moonrocks', cursive;
@@ -46,4 +73,12 @@ h1 {
     left: 20%;
     font-size: 10vh;
     position: absolute;
+    margin-top: 10px;
+}
+
+h2 {
+    font-family: 'Rubik Moonrocks', cursive;
+    color: #424242;
+    font-size: 8vh;
+    margin-top: 10px;
 }
