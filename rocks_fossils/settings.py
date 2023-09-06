@@ -42,6 +42,13 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+
+    # My apps
+    'comments',
+    'likes',
+    'posts',
+    'rocks',
+    'users',
 ]
 
 MIDDLEWARE = [
