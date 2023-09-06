@@ -18,12 +18,12 @@ class Rock(models.Model):
     tools_used = models.TextField(blank=True, null=True)
     date_found = models.DateTimeField(blank=True, null=True)
     prepped_self = models.BooleanField(blank=False, default=False)
-
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(
-        upload_to='images/', default='../default_post_i7zqny', blank=True
+        upload_to='images/', default='../default_post_i7zqny', blank=True, null=True
     )
     finished_image = models.ImageField(
-        upload_to='images/', default='../default_post_i7zqny', blank=True
+        upload_to='images/', default='../default_post_i7zqny', blank=True, null=True
     )
 
     class Meta:

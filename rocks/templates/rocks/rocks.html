@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    {% for rock in rocks %}
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{ rock.image.url }}" alt="{{ rock.title }}">
+        <div class="card-body">
+            <h5 class="card-title">{{ rock.title }}</h5>
+            <p class="card-text">
+                {{ rock.owner }}
+            </p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{ rock.location }}</li>
+            <li class="list-group-item">{{ rock.date_found }}</li>
+            <li class="list-group-item">{{ rock.extra_info }}</li>
+        </ul>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
