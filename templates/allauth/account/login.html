@@ -35,7 +35,7 @@
   <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
   {% endif %}
 
-  <form class="login login-form" method="POST" action="{% url 'account_login' %}">
+  <form class="login auth-form" method="POST" action="{% url 'account_login' %}">
     {% csrf_token %}
     {{ form.as_p }}
     {% if redirect_field_value %}
