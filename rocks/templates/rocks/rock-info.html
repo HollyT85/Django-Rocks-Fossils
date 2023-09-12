@@ -3,8 +3,39 @@
 
 {% block content %}
 
-<p>ROCK INFO</p>
+<div class="container">
 
-{{rock.title}}
+    <h2>{{rock.title}}</h2>
+
+    <img>{{rock.image.url}}
+
+    {% if rock.finished_image %}
+
+    <img>{{rock.finished_image}}
+
+    {% endif %}
+
+    <p>{{rock.owner}}</p>
+
+    <p>{{rock.extra_info}}</p>
+
+    <p>{{rock.location}}</p>
+
+    <p>{{ rock.material }}</p>
+
+    <p>{{rock.size}}</p>
+    
+    <p>{{rock.era}}</p>
+
+    <p>{{rock.tools_used}}</p>
+
+    <p>{{rock.date_found}}</p>
+
+    <p>{{rock.prepped_self}}</p>
+
+</div>
+
+
+
 
 {% endblock %}
