@@ -14,24 +14,51 @@
     <img>{{rock.finished_image}}
 
     {% endif %}
+    <div class="categories"> 
+        <p class="mr-2">Found by: </p>
+        <p> {{rock.owner}}</p>
+    </div>
 
-    <p>{{rock.owner}}</p>
-
-    <p>{{rock.extra_info}}</p>
-
-    <p>{{rock.location}}</p>
-
-    <p>{{ rock.material }}</p>
-
-    <p>{{rock.size}}</p>
+    <div class="categories">
+        <p class="mr-2">Information: </p>
+        <p>{{rock.extra_info}}</p>
+    </div>
     
-    <p>{{rock.era}}</p>
+    <div class="categories">
+        <p class="mr-2">Found: </p>
+        <p>{{rock.location}}</p>
+    </div>
 
-    <p>{{rock.tools_used}}</p>
+    <div class="categories">
+        <p class="mr-2">Material: </p>
+        <p>{{ rock.material }}</p>
+    </div>
 
-    <p>{{rock.date_found}}</p>
+    <div class="categories">
+        <p class="mr-2">Size(in mm): </p>
+        <p>{{rock.size}}</p>
+    </div>
 
-    <p>{{rock.prepped_self}}</p>
+    <div class="categories">
+        <p class="mr-2">Era: </p>
+        <p>{{rock.era}}</p>
+    </div>
+
+    <div class="categories">
+        <p class="mr-2">Tools Used: </p>
+        <p>{{rock.tools_used}}</p>
+    </div>
+
+    <div class="categories">
+        <p class="mr-2">Date Found: </p>
+        <p>{{rock.date_found}}</p>
+    </div>
+
+    <div class="categories">
+        <p class="mr-2">Prepped?: </p>
+        <p>{{rock.prepped_self}}</p>
+    </div>
+    
 
 </div>
 

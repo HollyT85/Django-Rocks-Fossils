@@ -135,3 +135,11 @@ a:hover {
     border-bottom-left-radius: 5%;
     border-bottom-right-radius: 5%;
 }
+
+/* rock info display page */
+
+.categories{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
