@@ -86,15 +86,21 @@ h2 {
 
 /* Cards for displaying rocks and fossils*/
 
-/* .card {
-    position: absolute;
-} */
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.card-title{
+    font-family: 'Bone', sans-serif;
+}
 
 .card-edit {
     width: 18rem;
     margin: 2rem;
     padding: 1rem;
-    display: inline-block;
     border: 2px #424242 solid;
     border-radius: 10%;
     background-color: #7099B2;

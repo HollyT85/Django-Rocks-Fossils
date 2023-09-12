@@ -6,7 +6,7 @@
 <!-- <div class="hero-image">
     <img src="{% static 'media/ammonite.png' %}" alt="ammonite" class="hero-image">
 </div> -->
-<div class="container">
+<div class="container flex">
     {% for rock in rocks %}
     <div class="card card-edit">
         <img class="card-img-top" src="{{ rock.image.url }}" alt="{{ rock.title }}">
@@ -18,9 +18,12 @@
         </div>
         <ul class="list-group list-group-flush ">
             <li class="list-group-item card-info">{{ rock.location }}</li>
-            <li class="list-group-item card-info">{{ rock.date_found }}</li>
             <li class="list-group-item card-info">{{ rock.extra_info }}</li>
         </ul>
+        <a href="{% url 'rock_info' rock.id %}">
+            More info...
+        </a>
+        <p class="text-right pt-2"></p>
     </div>
     {% endfor %}
 </div>

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
 
 from .models import Rock
@@ -12,6 +12,19 @@ def all_rocks(request):
     }
 
     return render(request, 'rocks/rocks.html', context)
+
+
+def rock_info(request, rock_id):
+    # Get individual rock info
+    rock = get_object_or_404(Rock, pk=rock_id)
+
+    context = {
+        'rock': rock,
+    }
+
+    return render(request, 'rocks/rock-info.html', context)
+
+
 
 # @login_required
 # def add_rock(request):
