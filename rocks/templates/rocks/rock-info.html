@@ -14,42 +14,52 @@
                 <p class="mr-2 sub-heading">Found by:</p>
                 <p class="info"> {{rock.owner}}</p>
             </div>
-        
+
             <div class="categories">
                 <p class="mr-2 sub-heading">Information: </p>
                 <p class="info">{{rock.extra_info}}</p>
             </div>
-            
+
             <div class="categories">
                 <p class="mr-2 sub-heading">Found: </p>
                 <p class="info">{{rock.location}}</p>
             </div>
-        
+
+            {% if rock.material %}
             <div class="categories">
                 <p class="mr-2 sub-heading">Material: </p>
                 <p class="info">{{ rock.material }}</p>
             </div>
-        
+            {% endif %}
+
+            {% if rock.size %}
             <div class="categories">
                 <p class="mr-2 sub-heading">Size<span class="mm">(in mm)</span>: </p>
                 <p class="info">{{rock.size}}</p>
             </div>
-        
+            {% endif %}
+
+            {% if rock.era %}
             <div class="categories">
                 <p class="mr-2 sub-heading">Era: </p>
                 <p class="info">{{rock.era}}</p>
             </div>
-        
+            {% endif %}
+
+            {% if rock.tools_used %}
             <div class="categories">
                 <p class="mr-2 sub-heading">Tools Used: </p>
                 <p class="info">{{rock.tools_used}}</p>
             </div>
-        
+            {% endif %}
+
+            {% if rock.date_found %}
             <div class="categories">
                 <p class="mr-2 sub-heading">Date Found: </p>
                 <p class="info">{{rock.date_found}}</p>
             </div>
-        
+            {% endif %}
+
             <div class="categories">
                 <p class="mr-2 sub-heading">Prepped?: </p>
                 <p class="info">{{rock.prepped_self}}</p>
