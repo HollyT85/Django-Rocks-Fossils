@@ -15,7 +15,7 @@ def all_rocks(request):
 
 
 def rock_info(request, rock_id):
-    # Get individual rock info
+    # Get individual rock/fossil info
     rock = get_object_or_404(Rock, pk=rock_id)
 
     context = {

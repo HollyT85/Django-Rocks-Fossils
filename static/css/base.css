@@ -142,4 +142,35 @@ a:hover {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
+    
+}
+
+.sub-heading{
+    font-family: 'Bone';
+    font-weight: 800;
+    font-size: 3vh;
+}
+
+.info {
+    font-family: 'New Rocker', cursive;
+    font-size: 3vh;
+}
+
+.mm {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1vh;
+}
+
+.rock-info {
+    background-color: #DDFBF6;
+    padding: 1rem;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px black solid;
+}
+
+.rock-image {
+    border: black 2px solid;
+    border-radius: 10px;
+    margin: 10px;
 }
