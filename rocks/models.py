@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 
 class Rock(models.Model):
@@ -18,13 +19,11 @@ class Rock(models.Model):
     tools_used = models.TextField(blank=True, null=True)
     date_found = models.DateTimeField(blank=True, null=True)
     prepped_self = models.BooleanField(blank=False, default=False)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(
-        upload_to='images/', default='../default_post_i7zqny', blank=True, null=True
-    )
-    finished_image = models.ImageField(
-        upload_to='images/', blank=True, null=True
-    )
+    image = CloudinaryField(
+        'image', default='placholder', blank=True, null=True)
+    # finished_image = CloudinaryField(
+    #     'image', blank=True, null=True
+    # )
 
     class Meta:
         verbose_name_plural = 'Rocks'
