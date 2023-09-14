@@ -31,7 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-hollyt85-djangorocksfos-jsv5q6q67sw.ws-eu104.gitpod.io']
 
-
+# X_FRAME_OPTIONS = 'SAMEORIGIN'
 # Application definition
 
 INSTALLED_APPS = [
