@@ -1,1 +1,1 @@
-web: gunicorn rocks_fossils.wsgi
+web: gunicorn rocks_fossils.wsgi:application
