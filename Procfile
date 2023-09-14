@@ -1,0 +1,1 @@
+web: gunicorn rocks_fossils.wsgi
