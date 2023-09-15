@@ -164,16 +164,23 @@ a:hover {
     color: #424242;
 }
 
+.rock-image {
+    border: #424242 2px solid;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* rock-info page */
+
+.img-info {
+    border-radius: 10px;
+    max-width: 30vw;
+}
+
 .rock-info {
     background-color: #DDFBF6;
     padding: 1rem;
     margin-top: 10px;
     border-radius: 10px;
     border: 1px #424242 solid;
-}
-
-.rock-image {
-    border: #424242 2px solid;
-    border-radius: 10px;
-    margin: 10px;
 }

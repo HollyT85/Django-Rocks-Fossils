@@ -3,17 +3,21 @@
 
 {% block content %}
 
-<div class="container rock-info">
-    <h2 class="text-center">{{rock.title}}</h2>
-    <div class="row">
-        <div class="col-5 rock-image">
-            <img src="{{ rock.image.url }}" alt="{{ rock.title }}">
-            <!-- {% if rock.finished_image %}
 
-            <img>{{rock.finished_image}}
-
-            {% endif %} -->
+<div class="row text-center rock-info">
+    <div class="col-12">
+        <h2 class="text-center">{{rock.title}}</h2>
+    </div>
+</div>
+<!--Image-->
+<div class="row py-5 px-5 rock-info">
+    <div class="col-lg-4 col-xs-12 mt-2">
+        <div>
+            <img class="card-img-top align-center" src="{{ rock.image.url }}" alt="{{ rock.title }}">
         </div>
+    </div>
+    <!--Product Description-->
+    <div class="col-lg-8 col-md-6 col-xs-12 mt-2">
         <div class="col-6">
             <div class="categories"> 
                 <p class="mr-2 sub-heading">Found by:</p>
@@ -69,22 +73,7 @@
                 <p class="mr-2 sub-heading">Prepped?: </p>
                 <p class="info">{{rock.prepped_self}}</p>
             </div>
-        </div>
     </div>
-    
 </div>
-
-    
-
-    
-
-    
-    
-    
-
-</div>
-
-
-
 
 {% endblock %}
