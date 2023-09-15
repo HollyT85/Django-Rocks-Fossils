@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- <div class="hero-image">
+    <img src="{% static 'media/ammonite.png' %}" alt="ammonite" class="hero-image">
+</div> -->
+<div class="container flex">
+    {% for rock in rocks %}
+    <div class="card card-edit">
+        <img class="card-img-top" src="{{ post.image.url }}" alt="{{ post.title }}">
+        <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text">
+                {{ post.owner }}
+            </p>
+        </div>
+        <ul class="list-group list-group-flush ">
+            <li class="list-group-item card-info">{{ post.created_at }}</li>
+            {% if post.updated_at %}
+            <li class="list-group-item card-info">{{ post.updated_at }}</li>
+            {% endif %}
+        </ul>
+        <a class="text-right pt2" href="{% url 'post_info' post.id %}">
+            More info...
+        </a>
+    </div>
+    {% endfor %}
+</div>
+</div>
+
+{% endblock %}
