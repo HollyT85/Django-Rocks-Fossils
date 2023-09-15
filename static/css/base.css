@@ -94,6 +94,10 @@ a:hover {
     color: black;
 }
 
+i {
+    color: #424242;
+}
+
 /* Cards for displaying rocks and fossils*/
 
 .flex {
@@ -169,8 +173,6 @@ a:hover {
     border-radius: 10px;
     margin: 10px;
 }
-
-/* rock-info page */
 
 .img-info {
     border-radius: 10px;
