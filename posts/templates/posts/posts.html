@@ -7,7 +7,7 @@
     <img src="{% static 'media/ammonite.png' %}" alt="ammonite" class="hero-image">
 </div> -->
 <div class="container flex">
-    {% for rock in rocks %}
+    {% for post in posts %}
     <div class="card card-edit">
         <img class="card-img-top" src="{{ post.image.url }}" alt="{{ post.title }}">
         <div class="card-body">
@@ -18,13 +18,16 @@
         </div>
         <ul class="list-group list-group-flush ">
             <li class="list-group-item card-info">{{ post.created_at }}</li>
-            {% if post.updated_at %}
-            <li class="list-group-item card-info">{{ post.updated_at }}</li>
-            {% endif %}
+            <a class="text-right pt2" href="{% url 'post_info' post.id %}">
+                More info...
+            </a>
+            <!-- {% if post.updated_at  %}
+            <li class="list-group-item card-info">Hello</li> -->
+            <!-- {% else %}
+            <li class="list-group-item card-info">{{ post.updated_at }}</li> -->
+            <!-- {% endif %} -->
         </ul>
-        <a class="text-right pt2" href="{% url 'post_info' post.id %}">
-            More info...
-        </a>
+        
     </div>
     {% endfor %}
 </div>
