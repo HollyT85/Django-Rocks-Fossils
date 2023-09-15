@@ -3,11 +3,19 @@
     padding: 0;
 }
 
-html, body {
+html{
     height: 100%;
-    background-color: #F6F5F7
 }
 
+body { 
+    background: url('/static/media/ammonite.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-width: 1024px;
+    overflow: hidden;
+}
 /* Navbar */
 
 nav {
@@ -37,12 +45,6 @@ nav {
 /* General Styles */
 
 .image-holder{
-    position: relative;
-}
-
-.hero-image{
-    width: 100%;
-    opacity: 0.3;
     position: relative;
 }
 
