@@ -29,10 +29,12 @@
                 <p class="info">{{rock.extra_info}}</p>
             </div>
 
+            {% if rock.location %}
             <div class="categories">
                 <p class="mr-2 sub-heading">Found: </p>
                 <p class="info">{{rock.location}}</p>
             </div>
+            {% endif %}
 
             {% if rock.material %}
             <div class="categories">

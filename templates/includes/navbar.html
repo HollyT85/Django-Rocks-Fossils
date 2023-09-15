@@ -1,9 +1,11 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg row">
     <div class="container-fluid">
         <a class="navbar-brand nav-title" href="{% url 'home' %}">Rocks and Fossils</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="fa-solid fa-bone"></i></span>
         </button>
+        
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 {% if request.user.is_authenticated %}
@@ -39,7 +41,6 @@
                         <a class="nav-link" href="{% url 'account_signup' %}">Join</a>
                     </li>
                 {% endif %}
-                
             </ul>
             <!-- <div class="nav-search">
                 <form class="d-flex">
