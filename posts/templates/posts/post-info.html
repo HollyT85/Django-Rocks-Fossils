@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="row text-center rock-info">
+    <div class="col-12">
+        <h2 class="text-center">{{post.title}}</h2>
+    </div>
+</div>
+<!--Image-->
+<div class="row py-5 px-5 rock-info">
+    <div class="col-lg-4 col-xs-12 mt-2">
+        <div>
+            <img class="card-img-top align-center" src="{{ post.image.url }}" alt="{{ post.title }}">
+        </div>
+    </div>
+    <!--Rock / Fossil Description-->
+    <div class="col-lg-8 col-md-6 col-xs-12 mt-2">
+        <div class="col-6">
+            <div class="categories"> 
+                <p class="mr-2 sub-heading">Post by:</p>
+                <p class="info"> {{post.owner}}</p>
+            </div>
+
+            <div class="categories">
+                <p class="mr-2 sub-heading">Created at: </p>
+                <p class="info">{{post.created_at}}</p>
+            </div>
+
+            <div class="categories">
+                <p class="mr-2 sub-heading">Updated: </p>
+                <p class="info">{{post.updated_at}}</p>
+            </div>
+
+            <div class="categories">
+                <p class="mr-2 sub-heading">Post:</p>
+                <p class="info">{{post.content}}</p>
+            </div>
+    </div>
+</div>
+
+{% endblock %}
