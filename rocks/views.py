@@ -33,17 +33,20 @@ def add_rock(request):
         messages.error(request, 'You are not authorised to do this.')
         return redirect(reverse('home'))
 
-    rock_form = RockForm(data=request.POST)
-
-    if rock_form.is_valid():
-        rock_form.instance.name = request.user.username
-        rock = rock_form.save()
-    else: 
+    if request.method == 'POST':
+        rock_form = RockForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = rock_form.save()
+            messages.success(request, 'Rock / Fossil successfully added')
+            return redirect(reverse('rock_info', args=[rock.id]))
+        else:
+            messages.error(request, 'Rock / Fossil not added; try again')
+    else:
         rock_form = RockForm()
 
-    return render(
-        request,
-        'rocks/add_rock.html', {
-            'rock_form': rock_form
-        }
-    )
+    template = 'rocks/add_rock.html'
+    context = {
+        'rock_form': rock_form,
+    }
+
+    return render(request, template, context)
