@@ -47,7 +47,3 @@ def add_rock(request):
             'rock_form': rock_form
         }
     )
-
-# def add_rock():
-    
-#     return render(request, 'rocks/add_rock.html')
