@@ -6,4 +6,8 @@ class RockForm(forms.ModelForm):
 
     class Meta:
         model = Rock
-        fields = '__all__'
+        fields = [
+            'title', 'extra_info', 'location',
+            'material', 'size', 'era', 'tools_used', 
+            'date_found', 'prepped_self', 'image'
+        ]
