@@ -192,3 +192,23 @@ i {
     border-radius: 10px;
     border: 1px #424242 solid;
 }
+
+/* home page */
+
+.welcome {
+    background-color: yellow;
+    width: 18rem;
+    margin: 2rem;
+    padding: 1rem;
+    border: 2px #424242 solid;
+    border-radius: 10%;
+}
+
+.extra {
+    background-color: pink;
+    width: 18rem;
+    margin: 2rem;
+    padding: 1rem;
+    border: 2px #424242 solid;
+    border-radius: 10%;
+}
