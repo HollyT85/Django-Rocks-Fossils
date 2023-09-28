@@ -35,12 +35,10 @@ def add_rock(request):
 
     if request.method == 'POST':
         rock_form = RockForm(request.POST, request.FILES)
-        if form.is_valid():
-            product = rock_form.save()
-            messages.success(request, 'Rock / Fossil successfully added')
+        if rock_form.is_valid():
+            rock = rock_form.save()
             return redirect(reverse('rock_info', args=[rock.id]))
-        else:
-            messages.error(request, 'Rock / Fossil not added; try again')
+
     else:
         rock_form = RockForm()
 

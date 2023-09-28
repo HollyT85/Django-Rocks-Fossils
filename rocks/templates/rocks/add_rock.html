@@ -4,12 +4,25 @@
 {% block content %}
 
 <div class="container">
-    <form method="post" class="add-form">
-    {{ rock_form | crispy }}
-    {% csrf_token %}
-    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-</form>
+    <div class="row">
+        <div class="col">
+            <h2>Add Rock / Fossil</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <!--Form to add rock / fossil-->
+            <form method="POST" action="{% url 'add_rock' %}" class="add-form"
+                enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ rock_form | crispy }}
+                <div>
+                    <a class="btn btn-secondary" href="{% url 'home' %}">Cancel</a>
+                    <button class="btn btn-secondary" type="submit">Add Rock / Fossil</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
-
 
 {% endblock %}
