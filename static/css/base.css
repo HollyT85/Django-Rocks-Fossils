@@ -48,14 +48,17 @@ nav {
     position: relative;
 }
 
-.border {
-    border: black solid 10px;
+/* Form displays */
+
+.all-auth {
+    border: black solid 2px;
     width: max-content;
     padding: 10px;
     background-color: #7099B2;
+    border-radius: 10px;
+    margin-left: 10vw;
 }
 
-/* Form displays */
 .auth-form {
     margin-left: auto;
     margin-right: auto;
@@ -224,3 +227,5 @@ i {
     max-width: 50vw;
     background-color: #DDFBF6;
 }
+
+/* all auth styling */
