@@ -14,7 +14,7 @@
     <div class="row">
         <div class="col">
             <!--Form to add rock / fossil-->
-            <form method="POST" action="{% url 'add_rock' %}" class="add-form" enctype="multipart/form-data">
+            <form method="POST" class="add-form">
                 {% csrf_token %}
                 <div class="mb-3">
                     <input type="text" class="form-control" id="owner" placeholder="{{rock.owner}}" name="owner"
@@ -38,7 +38,8 @@
                         required>
                     <label for="extra_info"></label>
                 </div>
-
+                <!-- {% csrf_token %}
+                {{ rock_form | crispy }} -->
                 <div>
                     <a class="btn btn-secondary" href="{% url 'home' %}">Cancel</a>
                     <button class="btn btn-secondary" type="submit">Add Rock / Fossil</button>
@@ -50,5 +51,3 @@
 
 {% endblock %}                
 
-<!-- {% csrf_token %}
-                {{ rock_form | crispy }} -->
