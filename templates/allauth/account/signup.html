@@ -5,10 +5,10 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-<div class="container">
+
   <h2>Join</h2>
 
-  <div class="border">
+  <div class="all-auth container">
   <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
 
   <form class="signup auth-form" id="signup_form" method="post" action="{% url 'account_signup' %}">
