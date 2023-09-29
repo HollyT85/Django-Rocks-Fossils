@@ -84,13 +84,14 @@ h2 {
     color: #424242;
     font-size: 8vh;
     margin-top: 10px;
+    text-align: center;
 }
 
 i {
     color: #424242;
 }
 
-a {
+a, button {
     text-decoration: none;
     color: #424242;
     font-family: 'Bone', sans-serif;
@@ -220,4 +221,6 @@ i {
     margin-right: auto;
     border-radius: 10px;
     padding: 10px;
+    max-width: 50vw;
+    background-color: #DDFBF6;
 }
