@@ -19,7 +19,7 @@
     <!--Rock / Fossil Description-->
     <div class="col-lg-8 col-md-6 col-xs-12 mt-2">
         <div class="col-6">
-            <div class="categories"> 
+            <div class="categories">
                 <p class="mr-2 sub-heading">Post by:</p>
                 <p class="info"> {{post.owner}}</p>
             </div>
@@ -38,17 +38,17 @@
                 <p class="mr-2 sub-heading">Post:</p>
                 <p class="info">{{post.content}}</p>
             </div>
+        </div>
     </div>
 </div>
 <div class="row">
     {% if request.user.is_superuser %}
-                <div class="row">
-                    <div class="col-12">
-                        <a class="btn btn-dark btn-sm my-2 mx-1"
-                            href="{% url 'edit_post' post.id %}">Edit</a>
-                    </div>
-                </div>
-                {% endif %}
+    <div class="row">
+        <div class="col-12">
+            <a class="btn btn-dark btn-sm my-2 mx-1" href="{% url 'edit_post' post.id %}">Edit</a>
+        </div>
+    </div>
+    {% endif %}
 </div>
 
 {% endblock %}
