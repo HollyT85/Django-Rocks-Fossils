@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Post
 
 def all_posts(request):
-    # View all rocks on the rock page
+    # View all posts on the blog page
     posts = Post.objects.all()
 
     context = {
@@ -15,7 +15,7 @@ def all_posts(request):
 
 
 def post_info(request, post_id):
-    # Get individual rock/fossil info
+    # Get individual post info
     post = get_object_or_404(Post, pk=post_id)
 
     context = {
