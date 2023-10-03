@@ -132,10 +132,11 @@ i {
 
 .card-img-top {
     height: 10rem; 
-    min-width: 15rem;
+    width: 16rem;
     border: 1px solid black;
     text-align: center;
     border-radius: 5%;
+    padding: 5px;
 }
 
 .card-img-left, .card-img-right {
@@ -144,6 +145,7 @@ i {
     border: 1px solid black;
     text-align: center;
     border-radius: 5%;
+    padding: 5px;
 }
 
 .card-body {
