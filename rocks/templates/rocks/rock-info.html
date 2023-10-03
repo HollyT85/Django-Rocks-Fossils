@@ -67,7 +67,7 @@
             {% if rock.date_found %}
             <div class="categories">
                 <p class="mr-2 sub-heading">Date Found: </p>
-                <p class="info">{{rock.date_found}}</p>
+                <p class="info">{{rock.date_found|date:"j/m/Y"}}</p>
             </div>
             {% endif %}
 

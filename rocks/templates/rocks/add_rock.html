@@ -15,7 +15,8 @@
         <div class="col">
             <!--Form to add rock / fossil-->
             <form method="POST" class="add-form">
-                {% csrf_token %}                    
+                {% csrf_token %}
+
                 {{ rock_form | crispy}}
                     <div>
                         <a class="btn btn-secondary" href="/">Cancel</a>

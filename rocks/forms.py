@@ -7,3 +7,6 @@ class RockForm(forms.ModelForm):
     class Meta:
         model = Rock
         fields = '__all__'
+        widgets = {
+            'date_found': forms.DateInput(attrs={'type': 'date'})
+        }
