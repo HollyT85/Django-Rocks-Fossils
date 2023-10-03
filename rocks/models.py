@@ -19,9 +19,9 @@ class Rock(models.Model):
     image = models.ImageField(
         upload_to='images/', default='../default_post_i7zqny', blank=True, null=True
     )
-    # finished_image = models.ImageField(
-    #     upload_to='images/', blank=True, null=True
-    # )
+    finished_image = models.ImageField(
+        upload_to='images/', blank=True, null=True
+    )
 
     class Meta:
         verbose_name_plural = 'Rocks'
