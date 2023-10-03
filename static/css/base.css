@@ -131,8 +131,8 @@ i {
 }
 
 .card-img-top {
-    min-height: 6rem; 
-    min-width: 16rem;
+    height: 10rem; 
+    min-width: 15rem;
     border: 1px solid black;
     text-align: center;
     border-radius: 5%;

@@ -27,7 +27,7 @@ class Rock(models.Model):
         verbose_name_plural = 'Rocks'
 
     class Meta:
-        ordering = ['date_found']
+        ordering = ['-date_found']
 
     def __str__(self):
         return f'{self.id} {self.title}'
