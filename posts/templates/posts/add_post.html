@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2>Add Post</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <!--Form to add rock / fossil-->
+            <form method="POST" class="add-form">
+                {% csrf_token %}
+
+                {{ post_form | crispy}}
+                    <div>
+                        <a class="btn btn-secondary" href="/">Cancel</a>
+                        <button class="btn btn-secondary" type="submit">Add Post</button>
+                    </div>
+                </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
