@@ -138,6 +138,14 @@ i {
     border-radius: 5%;
 }
 
+.card-img-left, .card-img-right {
+    max-height: 20rem;
+    max-width: 25rem;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5%;
+}
+
 .card-body {
     background-color: #687EA2;
     border-top-left-radius: 5%;
