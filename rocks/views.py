@@ -73,5 +73,4 @@ def edit_rock(request, rock_id):
         'rock': rock
     }
 
-
     return render(request, template, context)

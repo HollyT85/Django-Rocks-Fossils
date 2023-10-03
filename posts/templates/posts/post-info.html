@@ -40,5 +40,15 @@
             </div>
     </div>
 </div>
+<div class="row">
+    {% if request.user.is_superuser %}
+                <div class="row">
+                    <div class="col-12">
+                        <a class="btn btn-dark btn-sm my-2 mx-1"
+                            href="{% url 'edit_post' post.id %}">Edit</a>
+                    </div>
+                </div>
+                {% endif %}
+</div>
 
 {% endblock %}
