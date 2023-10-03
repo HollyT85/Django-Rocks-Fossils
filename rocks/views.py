@@ -48,3 +48,30 @@ def add_rock(request):
     }
 
     return render(request, template, context)
+
+@login_required()
+def edit_rock(request, rock_id):
+
+    if not request.user.is_superuser:
+        return redirect(reverse('home'))
+
+    rock = get_object_or_404(Rock, pk=rock_id)
+
+    if request.method == 'POST':
+        rock_form = RockForm(request.POST, request.FILES, instance=rock)
+        if rock_form.is_valid():
+            rock_form.save()
+            return redirect(reverse('rock_info', args=[rock.id]))
+        else:
+            console.log('fail')
+    else:
+        rock = RockForm(instance=rock)
+
+
+    template = 'rocks/edit_rock.html'
+    context = {
+        'rock_form': RockForm,
+        'rock': rock
+    }
+
+    return render(request, template, context)

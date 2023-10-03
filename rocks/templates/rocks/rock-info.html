@@ -148,5 +148,17 @@
     </div>
     {% endif %}
 </div>
+<div class="row">
+    <div class="col-12">
+        {% if request.user.is_superuser %}
+                <div class="row">
+                    <div class="col-12">
+                        <a class="btn btn-dark btn-sm my-2 mx-1"
+                            href="{% url 'edit_rock' rock.id %}">Edit</a>
+                    </div>
+                </div>
+                {% endif %}
+    </div>
+</div>
 
 {% endblock %}
