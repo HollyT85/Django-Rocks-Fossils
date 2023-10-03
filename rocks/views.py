@@ -63,15 +63,15 @@ def edit_rock(request, rock_id):
             rock_form.save()
             return redirect(reverse('rock_info', args=[rock.id]))
         else:
-            console.log('fail')
+            console.log('failed')
     else:
-        rock = RockForm(instance=rock)
-
+        rock_form = RockForm(instance=rock)
 
     template = 'rocks/edit_rock.html'
     context = {
-        'rock_form': RockForm,
+        'rock_form': rock_form,
         'rock': rock
     }
+
 
     return render(request, template, context)

@@ -16,7 +16,7 @@
 
                 {{ rock_form | crispy}}
                     <div>
-                        <a class="btn btn-secondary" href="/">Cancel</a>
+                        <a class="btn btn-secondary" href="{% url 'rock_info' rock.id %}">Cancel</a>
                         <button class="btn btn-secondary" type="submit">Save</button>
                     </div>
                 </form>
