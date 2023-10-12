@@ -13,7 +13,7 @@ class Rock(models.Model):
     size = models.CharField(max_length=50, blank=True, null=True)
     era = models.CharField(max_length=255, blank=True, null=True)
     tools_used = models.TextField(blank=True, null=True)
-    date_found = models.DateTimeField(blank=True, null=True)
+    date_found = models.DateField(blank=True, null=True)
     prepped_self = models.BooleanField(blank=False, default=False)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(
