@@ -6,7 +6,10 @@
 <div class="flex">
     {% for rock in rocks %}
     <div class="card card-edit">
-        <img class="card-img-top" src="{{ rock.image.url }}" alt="{{ rock.title }}">
+        <div class="card-img-top">
+            <img src="{{ rock.image.url }}" alt="{{ rock.title }}">
+        </div>
+        
         <div class="card-body">
             <h5 class="card-title">{{ rock.title }}</h5>
             <p class="card-text">
