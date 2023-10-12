@@ -6,7 +6,7 @@
 <!-- <div class="hero-image">
     <img src="{% static 'media/ammonite.png' %}" alt="ammonite" class="hero-image">
 </div> -->
-<div class="container flex">
+<div class="flex">
     {% for post in posts %}
     <div class="card card-edit">
         <img class="card-img-top" src="{{ post.image.url }}" alt="{{ post.title }}">
@@ -29,10 +29,6 @@
         </ul>
         
     </div>
-    {% if forloop.counter|divisibleby:3 %}
-</div>
-<div class="container flex">
-{% endif %}
     {% endfor %}
 </div>
 </div>
