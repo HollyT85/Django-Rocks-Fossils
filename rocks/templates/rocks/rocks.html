@@ -17,11 +17,15 @@
             </p>
         </div>
         <ul class="list-group list-group-flush ">
-            <li class="list-group-item card-info">{{ rock.location }}</li>
-            {% if rock.extra_info %}
-            <li class="list-group-item card-info">{{ rock.extra_info }}</li>
+            {% if rock.location %}
+            <li class="list-group-item card-info">Location Found: {{ rock.location }}</li>
             {% else %}
-            <li class="list-group-item card-info">No Information at This Time</li>
+            <li class="list-group-item card-info">Location Found: unknown</li>
+            {% endif %}
+            {% if rock.date_found %}
+            <li class="list-group-item card-info">Date Found: {{ rock.date_found }}</li>
+            {% else %}
+            <li class="list-group-item card-info">No Idea When This Was Found!</li>
             {% endif %}
         </ul>
         <a class="text-right pt2" href="{% url 'rock_info' rock.id %}">
