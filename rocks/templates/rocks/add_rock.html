@@ -16,7 +16,7 @@
             <!--Form to add rock / fossil-->
             <form method="POST" class="add-form" enctype="multipart/form-data">
                 {% csrf_token %}
-
+                
                 {{ rock_form | crispy}}
                     <div>
                         <a class="btn btn-secondary" href="/">Cancel</a>

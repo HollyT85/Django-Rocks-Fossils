@@ -115,6 +115,7 @@ i {
     flex-direction: row;
     justify-content: flex-start;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 .card-title{
