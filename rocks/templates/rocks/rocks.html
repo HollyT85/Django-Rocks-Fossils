@@ -18,7 +18,11 @@
         </div>
         <ul class="list-group list-group-flush ">
             <li class="list-group-item card-info">{{ rock.location }}</li>
+            {% if rock.extra_info %}
             <li class="list-group-item card-info">{{ rock.extra_info }}</li>
+            {% else %}
+            <li class="list-group-item card-info">No Information at This Time</li>
+            {% endif %}
         </ul>
         <a class="text-right pt2" href="{% url 'rock_info' rock.id %}">
             More info...
