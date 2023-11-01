@@ -16,7 +16,16 @@
                         <a class="nav-link" href="{% url 'add_post' %}">Add Post</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'rocks' %}">Rocks & Fossils</a>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Rocks & Fossils
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{% url 'rocks' %}">All Rocks and Fossils</a></li>
+                                <li><a class="dropdown-item" href="{% url 'rocks' %}? rock_fossil = ROCK">Rocks</a></li>
+                                <li><a class="dropdown-item" href="{% url 'rocks' %}? rock_fossil = FOSSIL">Fossils</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'add_rock' %}">Add Rock or Fossil</a>
