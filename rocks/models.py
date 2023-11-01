@@ -9,7 +9,7 @@ CHOICES = (
 
 class Rock(models.Model):
 
-    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
     extra_info = models.TextField(blank=True, null=True)
     location = models.CharField(max_length=255, blank=True, null=True)

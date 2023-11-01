@@ -29,6 +29,7 @@ def rock_info(request, rock_id):
 
 @login_required
 def add_rock(request):
+
     if not request.user.is_superuser:
 
         return redirect(reverse('home'))
