@@ -32,7 +32,7 @@ nav {
     color: black;
 }
 
-.nav-link {
+.nav-link, .dropdown-item {
     color: #424242;
     text-decoration: none;
     font-family: 'New Rocker', cursive;
