@@ -10,28 +10,10 @@ def all_rocks(request):
 
     context = {
         'rocks': rocks,
-
     }
 
     return render(request, 'rocks/rocks.html', context)
 
-def just_rocks(request):
-    rocks = Rock.objects.filter(rock_fossil='rock')
-
-    context = {
-        'rocks': rocks,
-    }
-
-    return render (request, 'rocks/rocks.html', context)
-
-def just_fossils(request):
-    fossils = Rock.objects.filter(rock_fossil='fossil')
-
-    context = {
-        'fossils': fossils,
-    }
-
-    return render (request, 'rocks/rocks.html', context)
 
 def rock_info(request, rock_id):
     # Get individual rock/fossil info
