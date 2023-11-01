@@ -1,6 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+CHOICES = (
+    ('rock', 'ROCK'),
+    ('fossil', 'FOSSIL')
+)
 
 
 class Rock(models.Model):
@@ -15,6 +19,7 @@ class Rock(models.Model):
     tools_used = models.TextField(blank=True, null=True)
     date_found = models.DateField(blank=True, null=True)
     prepped_self = models.BooleanField(blank=False, default=False)
+    rock_fossil = models.CharField(max_length=6, choices=CHOICES, default='fossil')
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(
         upload_to='images/', default='../default_post_i7zqny', blank=True, null=True
