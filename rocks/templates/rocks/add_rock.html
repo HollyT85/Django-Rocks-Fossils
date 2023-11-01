@@ -16,97 +16,13 @@
             <!--Form to add rock / fossil-->
             <form method="POST" class="add-form" enctype="multipart/form-data">
                 {% csrf_token %}
-
-                <div id="div_id_owner" class="form-group"> <label for="id_owner" class=" requiredField">
-                        Owner<span class="asteriskField">*</span></label>
-                        <input name="owner" id="owner" class="form-control" value="{{ rock.owner }}"><br>
-                </div>
-                <div id="div_id_title" class="form-group"> <label for="id_title" class=" requiredField">
-                        Title<span class="asteriskField">*</span> </label>
-                    <div> <input type="text" name="title" maxlength="255" class="textinput textInput form-control"
-                            required id="id_title"> </div>
-                </div>
-                <div id="div_id_extra_info" class="form-group"> <label for="id_extra_info" class="">
-                        Extra info
-                    </label>
-                    <div> <textarea name="extra_info" cols="40" rows="10" class="textarea form-control"
-                            id="id_extra_info">
-    </textarea> </div>
-                </div>
-                <div id="div_id_location" class="form-group"> <label for="id_location" class="">
-                        Location
-                    </label>
-                    <div> <input type="text" name="location" maxlength="255" class="textinput textInput form-control"
-                            id="id_location"> </div>
-                </div>
-                <div id="div_id_material" class="form-group"> <label for="id_material" class="">
-                        Material
-                    </label>
-                    <div> <input type="text" name="material" maxlength="255" class="textinput textInput form-control"
-                            id="id_material"> </div>
-                </div>
-                <div id="div_id_size" class="form-group"> <label for="id_size" class="">
-                        Size
-                    </label>
-                    <div> <input type="text" name="size" maxlength="50" class="textinput textInput form-control"
-                            id="id_size"> </div>
-                </div>
-                <div id="div_id_era" class="form-group"> <label for="id_era" class="">
-                        Era
-                    </label>
-                    <div> <input type="text" name="era" maxlength="255" class="textinput textInput form-control"
-                            id="id_era"> </div>
-                </div>
-                <div id="div_id_tools_used" class="form-group"> <label for="id_tools_used" class="">
-                        Tools used
-                    </label>
-                    <div> <textarea name="tools_used" cols="40" rows="10" class="textarea form-control"
-                            id="id_tools_used">
-    </textarea> </div>
-                </div>
-                <div id="div_id_date_found" class="form-group"> <label for="id_date_found" class="">
-                        Date found
-                    </label>
-                    <div> <input type="date" name="date_found" class="dateinput form-control" id="id_date_found"> </div>
-                </div>
-                <div class="form-group">
-                    <div id="div_id_prepped_self" class="form-check"> <input type="checkbox" name="prepped_self"
-                            class="checkboxinput form-check-input" id="id_prepped_self"> <label for="id_prepped_self"
-                            class="form-check-label">
-                            Prepped self
-                        </label> </div>
-                </div>
-                <div id="div_id_rock_fossil" class="form-group"> <label for="id_rock_fossil" class=" requiredField">
-                        Rock fossil<span class="asteriskField">*</span> </label>
-                    <div> <select name="rock_fossil" class="select form-control" id="id_rock_fossil">
-                            <option value="rock">ROCK</option>
-                            <option value="fossil" selected>FOSSIL</option>
-
-                        </select> </div>
-                </div>
-                <div id="div_id_image_url" class="form-group"> <label for="id_image_url" class="">
-                        Image url
-                    </label>
-                    <div> <input type="url" name="image_url" maxlength="1024" class="urlinput form-control"
-                            id="id_image_url"> </div>
-                </div>
-                <div id="div_id_image" class="form-group"> <label for="id_image" class="">
-                        Image
-                    </label>
-                    <div> <input type="file" name="image" accept="image/*" class="clearablefileinput form-control-file"
-                            id="id_image"> </div>
-                </div>
-                <div id="div_id_finished_image" class="form-group"> <label for="id_finished_image" class="">
-                        Finished image
-                    </label>
-                    <div> <input type="file" name="finished_image" accept="image/*"
-                            class="clearablefileinput form-control-file" id="id_finished_image"> </div>
-                </div>
-                <div>
-                    <a class="btn btn-secondary btn-sm my-2 mx-1" href="/">Cancel</a>
-                    <button class="btn btn-secondary btn-sm my-2 mx-1" type="submit">Add Rock / Fossil</button>
-                </div>
-            </form>
+                
+                {{ rock_form | crispy}}
+                    <div>
+                        <a class="btn btn-secondary btn-sm my-2 mx-1" href="/">Cancel</a>
+                        <button class="btn btn-secondary btn-sm my-2 mx-1" type="submit">Add Rock / Fossil</button>
+                    </div>
+                </form>
         </div>
     </div>
 </div>
