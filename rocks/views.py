@@ -7,9 +7,18 @@ from .forms import RockForm
 def all_rocks(request):
     # View all rocks on the rock page
     rocks = Rock.objects.all()
+    # rock_fossil = None
+
+
+    # if request.GET:
+    #     if 'rock_fossil' in request.GET:
+    #         item = request.GET['rock_fossil'].split(',')
+    #         rock_fossil = rocks.filter(rocks__rock_fossil__in=item)
+    #         rock = Rocks.objects.filter(rock_fossil__in=item)
 
     context = {
         'rocks': rocks,
+        # 'rock_fossil': rock_fossil
     }
 
     return render(request, 'rocks/rocks.html', context)
