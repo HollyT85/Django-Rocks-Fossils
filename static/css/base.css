@@ -238,6 +238,12 @@ i {
     justify-content: space-between;
 }
 
+.fossilimg {
+    max-width: 33vw;
+    max-height: 75vh;
+    padding: 15vh 2vw;
+}
+
 .extra {
     background-color: pink;
     width: 18rem;
