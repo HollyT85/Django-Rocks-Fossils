@@ -38,13 +38,13 @@ def rock_info(request, rock_id):
 
 @login_required
 def add_rock(request):
-
+    
     if not request.user.is_superuser:
 
         return redirect(reverse('home'))
 
     if request.method == 'POST':
-        rock_form = RockForm(request.POST, request.FILES)
+        rock_form = RockForm(request.POST, request.FILES, instance=instance)
         if rock_form.is_valid():
             rock = rock_form.save()
             return redirect(reverse('rock_info', args=[rock.id]))
