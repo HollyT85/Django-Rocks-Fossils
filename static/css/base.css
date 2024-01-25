@@ -233,6 +233,11 @@ i {
     border-radius: 10%;
 }
 
+.triptych{
+    display: flex;
+    justify-content: space-between;
+}
+
 .extra {
     background-color: pink;
     width: 18rem;
