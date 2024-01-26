@@ -43,12 +43,12 @@ def add_rock(request):
     if not request.user.is_authenticated:
 
         return redirect(reverse('home'))
-    rock_form = RockForm(request.POST, request.FILES)
+    
     if request.method == 'POST':
-        
+        rock_form = RockForm(request.POST, request.FILES)
         if rock_form.is_valid():
             rock = rock_form.save(commit=False)
-            rock.user = request.user
+            rock.owner = request.user
             rock = rock_form.save()
             return redirect(reverse('rock_info', args=[rock.id]))
 

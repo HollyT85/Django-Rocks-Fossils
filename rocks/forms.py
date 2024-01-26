@@ -6,7 +6,7 @@ from .models import Rock
 class RockForm(forms.ModelForm):
     class Meta:
         model = Rock
-        fields = '__all__'
+        exclude = ['user',]
         widgets = {
             'date_found': forms.DateInput(attrs={'type': 'date'}),
             'owner': TextInput(attrs={'readonly': 'readonly'})
