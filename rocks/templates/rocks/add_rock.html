@@ -16,6 +16,7 @@
             <!--Form to add rock / fossil-->
             <form method="POST" class="add-form" enctype="multipart/form-data">
                 {% csrf_token %}
+                <p>Found by : {{user}}</p>
 
                 {{ rock_form | crispy}}
                     <div>

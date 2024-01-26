@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
 
 from .models import Rock
+from users.models import Profile
 from .forms import RockForm
 
 def all_rocks(request):
@@ -39,13 +40,15 @@ def rock_info(request, rock_id):
 @login_required
 def add_rock(request):
     
-    if not request.user.is_superuser:
+    if not request.user.is_authenticated:
 
         return redirect(reverse('home'))
-
+    rock_form = RockForm(request.POST, request.FILES)
     if request.method == 'POST':
-        rock_form = RockForm(request.POST, request.FILES, instance=instance)
+        
         if rock_form.is_valid():
+            rock = rock_form.save(commit=False)
+            rock.user = request.user
             rock = rock_form.save()
             return redirect(reverse('rock_info', args=[rock.id]))
 
